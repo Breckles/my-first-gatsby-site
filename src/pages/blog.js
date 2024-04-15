@@ -4,19 +4,26 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 
 const BlogPage = ({ data }) => {
-  const listItems = data.allFile.nodes.map((node) => <li>{node.name}</li>);
-  return (
-    <Layout pageTitle="My Blog Posts">
-      <ul>{listItems}</ul>
-    </Layout>
-  );
+  const articles = data.allMdx.nodes.map((node) => (
+    <article key={node.id}>
+      <h2>{node.frontmatter.title}</h2>
+      <p>Posted: {node.frontmatter.date}</p>
+      <p>{node.excerpt}</p>
+    </article>
+  ));
+  return <Layout pageTitle="My Blog Posts">{articles}</Layout>;
 };
 
 export const query = graphql`
   query {
-    allFile {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        name
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+        }
+        id
+        excerpt
       }
     }
   }

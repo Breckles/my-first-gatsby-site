@@ -1,0 +1,22 @@
+Tip: There are a variety of remark plugins that you can use to add extra features to your Markdown. You can configure them using the gatsbyRemarkPlugins option when you configure gatsby-plugin-mdx in your gatsby-config.js file.
+
+Here are some popular remark plugins:
+
+    gatsby-remark-images: Use this if you want to generate responsive images when using the Markdown image syntax (which looks like this: ![alt](image url)).
+        To use this plugin, you’ll also need gatsby-plugin-sharp, which you installed already in Part 3.
+    gatsby-remark-prismjs: Add syntax highlighting to your code blocks.
+    gatsby-remark-autolink-headers: Automatically create links for all the headers in your Markdown content.
+
+Try searching for gatsby-remark- in the Gatsby Plugin Library for a full list.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+Imagine you have a key in your frontmatter with a value that uses a date format
+like "YYYY-MM-DD". (It doesn’t matter what you name the key, as long as the
+value has the required format.) GraphiQL will automatically detect that your
+value is a date, and when you select the corresponding frontmatter field in the
+Explorer pane, GraphiQL will automatically show a few arguments that you can
+pass to that field. One of those arguments is called formatString, which you can
+pass a Moment.js formatting token to change the way the date displays.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
