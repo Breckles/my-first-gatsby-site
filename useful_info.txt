@@ -20,3 +20,9 @@ pass to that field. One of those arguments is called formatString, which you can
 pass a Moment.js formatting token to change the way the date displays.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+File System Route API will be IMPORTANT. Learn more here: https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
